@@ -9,11 +9,11 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #3f3f3f;
-    background-color: #fefbfb;
+    background-color: #fc7878;
 }
 
 header {
-    background-color: #004b87; /* Georgia Tech Blue */
+    background-color: #2d2d2d; /* Georgia Tech Blue */
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -57,7 +57,7 @@ section h2 {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #004b87;
+    background-color: #4c4c4c;
     color: #fff;
     position: fixed;
     bottom: 0;
