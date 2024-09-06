@@ -8,17 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startGame() {
         result.innerText = '';
-        userInput.value = '';
-        userInput.disabled = false;
+        userInput.innerHTML = ''; // Clear previous content
+        userInput.removeAttribute('contenteditable');
+        userInput.setAttribute('contenteditable', 'true');
         userInput.focus();
         startTime = new Date();
         userInput.style.backgroundColor = ''; // Reset background color
-        userInput.classList.remove('correct', 'incorrect');
-        userInput.style.color = ''; // Reset text color
     }
 
     function checkTyping() {
-        const typedText = userInput.value;
+        const typedText = userInput.innerText;
         let highlightedText = '';
         
         for (let i = 0; i < typedText.length; i++) {
@@ -41,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const endTime = new Date();
             const timeTaken = ((endTime - startTime) / 1000).toFixed(2);
             result.innerText = `Congratulations! You typed the text correctly in ${timeTaken} seconds.`;
-            userInput.disabled = true;
+            userInput.removeAttribute('contenteditable');
         }
     }
 
