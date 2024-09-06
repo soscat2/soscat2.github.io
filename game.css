@@ -20,6 +20,16 @@
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    white-space: pre-wrap; /* Preserve spaces and line breaks */
+    word-wrap: break-word;
+}
+
+#user-input.correct {
+    background-color: #d4edda; /* Pale green */
+}
+
+#user-input.incorrect {
+    background-color: #f8d7da; /* Pale red */
 }
 
 #result {
@@ -40,4 +50,16 @@
 
 #restart-game:hover {
     background-color: #0056b3;
+}
+
+.correct {
+    background-color: #d4edda; /* Pale green */
+}
+
+.incorrect {
+    background-color: #f8d7da; /* Pale red */
+}
+
+span {
+    display: inline-block;
 }
