@@ -30,11 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        // Add the remaining text from the sentence that hasn't been typed yet
         for (let i = typedText.length; i < textToType.length; i++) {
             highlightedText += `<span>${textToType[i]}</span>`;
         }
 
-        userInput.innerHTML = highlightedText;
+        document.getElementById('text-to-type').innerHTML = highlightedText;
 
         if (typedText === textToType) {
             const endTime = new Date();
